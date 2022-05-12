@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
 
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
-            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                if(boolean){
+            public void onProgressChanged(SeekBar seekBar, int i, boolean fromUser) {
+                if(fromUser){
                     mediaPlayer.seekTo(i);
                 }
             }
