@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     EditText first_no, second_no;
     TextView textView;
-    Button button;
+    Button button, sub, multiply , divide;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,10 @@ public class MainActivity extends AppCompatActivity {
         second_no = findViewById(R.id.second_no);
         textView = findViewById(R.id.textView);
         button = findViewById(R.id.button);
+        sub = findViewById(R.id.sub);
+        multiply = findViewById(R.id.multiply);
+        divide = findViewById(R.id.divide);
+
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +35,48 @@ public class MainActivity extends AppCompatActivity {
                 b = Float.parseFloat(second_no.getText().toString());
 
                 output = a +b;
+                textView.setText("Result: " + output);
+                first_no.setText("");
+                second_no.setText("");
+
+            }
+        });
+        sub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                float a , b, output;
+                a = Float.parseFloat(first_no.getText().toString());
+                b = Float.parseFloat(second_no.getText().toString());
+
+                output = a -b;
+                textView.setText("Result: " + output);
+                first_no.setText("");
+                second_no.setText("");
+
+            }
+        });
+        multiply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                float a , b, output;
+                a = Float.parseFloat(first_no.getText().toString());
+                b = Float.parseFloat(second_no.getText().toString());
+
+                output = a *b;
+                textView.setText("Result: " + output);
+                first_no.setText("");
+                second_no.setText("");
+
+            }
+        });
+        divide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                float a , b, output;
+                a = Float.parseFloat(first_no.getText().toString());
+                b = Float.parseFloat(second_no.getText().toString());
+
+                output = a / b;
                 textView.setText("Result: " + output);
                 first_no.setText("");
                 second_no.setText("");
