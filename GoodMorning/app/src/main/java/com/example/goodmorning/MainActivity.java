@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 String uname = usr_name.getText().toString();
                 String upass = usr_pass.getText().toString();
 
-                if((uname.equals("Sahil")) && (upass.equals("Password"))){
+                if((uname.equals("Sahil pillania")) && (upass.equals("Password1234"))){
                     output.setText("Valid User");
                     Toast.makeText(MainActivity.this, "Valid User", Toast.LENGTH_SHORT).show();
                 }
