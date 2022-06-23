@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Telephony_manager</string>
+    <string name="button">Get Phone Details</string>
 </resources>
